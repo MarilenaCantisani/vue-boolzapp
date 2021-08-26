@@ -22,6 +22,15 @@
 .w-1200 {
     width: 1200px;
 }
+.f-12 {
+    font-size: 12px;
+}
+.f-14 {
+    font-size: 14px;
+}
+.f-15 {
+    font-size: 15px;
+}
 /* Bg-color */
 .bg-light-grey {
     background-color: #eaeaea;
@@ -41,6 +50,9 @@
 /* Text-color */
 .text-grey {
     color: #b1b1b1;
+}
+.text-dark-grey {
+    color: #748485;
 }
 
 
@@ -69,4 +81,13 @@
 .img-avatar {
     height: 8vh;
     border-radius: 50%;
+}
+
+.fa-bell-slash {
+    border-radius: 50%;
+    background-color: white;
+    padding: 13px 10px;
+    font-size: 20px;
+    margin: 0 12px;
+    color: #8edafc;
 }
