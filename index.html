@@ -32,9 +32,9 @@
                             <span class="f-15">Nome Utente</span>
                         </div>
                         <div class="col text-end d-flex align-items-center justify-content-end">
-                            <i class="fas fa-circle-notch px-2 text-grey"></i>
-                            <i class="fas fa-comment-alt px-2 text-grey"></i>
-                            <i class="fas fa-ellipsis-v px-2 text-grey"></i>
+                            <i class="fas fa-circle-notch px-2 text-grey f-24"></i>
+                            <i class="fas fa-comment-alt px-2 text-grey f-24"></i>
+                            <i class="fas fa-ellipsis-v px-2 text-grey f-24"></i>
                         </div>
                     </div>
                     <!--** Alert section -->
@@ -51,80 +51,142 @@
                     </div>
                     <!--** Chat search section -->
                     <div id="chat-search" class="row bg-ligher-grey">
-                        <div class="col h-4vh bg-white m-2">
-
+                        <div class="col h-4vh bg-white m-2 d-flex align-items-center">
+                            <i class="fas fa-search text-light-grey mx-2"></i>
+                            <span class="f-12 text-light-grey ms-4">Cerca o inizia una nuova chat</span>
                         </div>
                     </div>
                     <!--** Users chat section -->
                     <section id="contact" class="bg-white">
-                        <div id="chat-contact" class="row">
-                            <div class="col h-10vh bg-chat-selected border-bottom border-light">
-
+                        <div class="row">
+                            <div
+                                class="col-12 h-10vh bg-chat-selected border-bottom border-light d-flex align-items-center mx-2">
+                                <img class="img-avatar" src="./img/avatar_1.jpg" alt="">
+                                <span class="mx-2">Michele</span>
                             </div>
-                        </div>
-                        <div id="chat-contact" class="row">
-                            <div class="col h-10vh bg-white border-bottom border-light">
-
+                            <div class="col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2">
+                                <img class="img-avatar" src="./img/avatar_2.jpg" alt="">
+                                <span class="mx-2">Fabio</span>
                             </div>
-                        </div>
-                        <div id="chat-contact" class="row">
-                            <div class="col h-10vh bg-white border-bottom border-light">
-
+                            <div class="col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2">
+                                <img class="img-avatar" src="./img/avatar_3.jpg" alt="">
+                                <span class="mx-2">Samuele</span>
                             </div>
-                        </div>
-                        <div id="chat-contact" class="row">
-                            <div class="col h-10vh bg-white border-bottom border-light">
-
+                            <div class="col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2">
+                                <img class="img-avatar" src="./img/avatar_4.jpg" alt="">
+                                <span class="mx-2">Luisa</span>
                             </div>
-                        </div>
-                        <div id="chat-contact" class="row">
-                            <div class="col h-10vh bg-white border-bottom border-light">
-
+                            <div class="col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2">
+                                <img class="img-avatar" src="./img/avatar_1.jpg" alt="">
+                                <span class="mx-2">Michele</span>
                             </div>
-                        </div>
-                        <div id="chat-contact" class="row">
-                            <div class="col h-10vh bg-white border-bottom border-light">
-
+                            <div class="col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2">
+                                <img class="img-avatar" src="./img/avatar_2.jpg" alt="">
+                                <span class="mx-2">Fabio</span>
                             </div>
-                        </div>
-                        <div id="chat-contact" class="row">
-                            <div class="col h-10vh bg-white border-bottom border-light">
-
+                            <div class="col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2">
+                                <img class="img-avatar" src="./img/avatar_3.jpg" alt="">
+                                <span class="mx-2">Samuele</span>
                             </div>
-                        </div>
-                        <div id="chat-contact" class="row">
-                            <div class="col h-10vh bg-white border-bottom border-light">
-
+                            <div class="col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2">
+                                <img class="img-avatar" src="./img/avatar_4.jpg" alt="">
+                                <span class="mx-2">Luisa</span>
                             </div>
                         </div>
                     </section>
                 </div>
 
                 <!--// CHAT COLUMN -->
-                <div id="chat-section" class="col-8 h-90vh bg-success">
-                    <div id="top-bar-contact" class="row">
-                        <div class="col h-10vh bg-light-grey">
-
-
+                <div id="chat-section" class="col-8 h-90vh">
+                    <div id="top-bar-contact" class="row d-flex">
+                        <div class="col h-10vh bg-light-grey d-flex align-items-center">
+                            <img class="img-avatar mx-2" src="./img/avatar_1.jpg" alt="">
+                            <span class="mx-2">
+                                <div class="f-15 lh-sm">Michele</div>
+                                <div class="text-dark-grey f-12 lh-sm">Ultimo accesso oggi alle</div>
+                            </span>
+                        </div>
+                        <div class="col h-10vh bg-light-grey d-flex align-items-center justify-content-end">
+                            <i class="fas fa-search f-24 text-light-grey px-2"></i>
+                            <i class="fas fa-paperclip f-24 px-2 text-light-grey"></i>
+                            <i class="fas fa-ellipsis-v px-2 text-grey f-24 px-2 text-light-grey"></i>
                         </div>
                     </div>
-                    <div id="cental-chat-contact" class="row h-70vh">
-                        <div class="col ">
-
-
-
+                    <div id="cental-chat-contact" class="h-70vh">
+                        <div class="row my-4">
+                            <div class="col d-flex frex-grow-1 m-60"></div>
+                            <div class="col h-8vh h-4vh sent-messages m-60 chat-message">
+                                <div class="f-14">Hai portato a spasso il cane?</div>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col h-8vh received-messages m-60 chat-message">
+                                <span class="f-14">Tutto fatto! </span>
+                            </div>
+                            <div class="col d-flex frex-grow-1 m-60"></div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col d-flex frex-grow-1 m-60"></div>
+                            <div class="col h-8vh h-4vh sent-messages m-60 chat-message">
+                                <div class="f-14">Hai portato a spasso il cane?</div>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col h-8vh received-messages m-60 chat-message">
+                                <span class="f-14">Tutto fatto! </span>
+                            </div>
+                            <div class="col d-flex frex-grow-1 m-60"></div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col d-flex frex-grow-1 m-60"></div>
+                            <div class="col h-8vh h-4vh sent-messages m-60 chat-message">
+                                <div class="f-14">Hai portato a spasso il cane?</div>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col h-8vh received-messages m-60 chat-message">
+                                <span class="f-14">Tutto fatto! </span>
+                            </div>
+                            <div class="col d-flex frex-grow-1 m-60"></div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col d-flex frex-grow-1 m-60"></div>
+                            <div class="col h-8vh h-4vh sent-messages m-60 chat-message">
+                                <div class="f-14">Hai portato a spasso il cane?</div>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col h-8vh received-messages m-60 chat-message">
+                                <span class="f-14">Tutto fatto! </span>
+                            </div>
+                            <div class="col d-flex frex-grow-1 m-60"></div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col d-flex frex-grow-1 m-60"></div>
+                            <div class="col h-8vh h-4vh sent-messages m-60 chat-message">
+                                <div class="f-14">Hai portato a spasso il cane?</div>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col h-8vh received-messages m-60 chat-message">
+                                <span class="f-14">Tutto fatto! </span>
+                            </div>
+                            <div class="col d-flex frex-grow-1 m-60"></div>
                         </div>
                     </div>
-                    <div id="bottom-bar-message" class="row">
-                        <div class="col h-10vh bg-light-beige">
-
+                    <div id="bottom-bar-message" class="row d-flex  bg-light-beige">
+                        <div class="col-1 h-10vh bg-light-beige d-flex align-items-center justify-content-center">
+                            <i class="far fa-smile f-24 text-dark-grey"></i>
+                        </div>
+                        <div id="message-section" class="col-10 d-flex bg-white align-items-center">
+                            <span class="text-dark-grey f-15">Scrivi un messaggio</span>
+                        </div>
+                        <div class="col-1 h-10vh bg-light-beige d-flex align-items-center justify-content-center">
+                            <i class="fas fa-microphone f-24 text-dark-grey"></i>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
     </div>

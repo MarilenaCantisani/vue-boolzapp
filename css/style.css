@@ -9,6 +9,9 @@
 .h-4vh {
     height: 5vh;
 }
+.h-8vh {
+    height: 8vh;
+}
 .h-10vh {
     height: 10vh;
 }
@@ -22,6 +25,9 @@
 .w-1200 {
     width: 1200px;
 }
+.w-500 {
+    width: 1000px;
+}
 .f-12 {
     font-size: 12px;
 }
@@ -30,6 +36,12 @@
 }
 .f-15 {
     font-size: 15px;
+}
+.f-24 {
+    font-size: 24px;
+}
+.m-60 {
+    margin: 0 60px;
 }
 /* Bg-color */
 .bg-light-grey {
@@ -47,12 +59,16 @@
 .bg-light-beige {
     background-color: #f3eeea;    
 }
+
 /* Text-color */
 .text-grey {
     color: #b1b1b1;
 }
 .text-dark-grey {
     color: #748485;
+}
+.text-light-grey {
+    color: #b6b9bb;
 }
 
 
@@ -75,9 +91,13 @@
 #cental-chat-contact {
     overflow-y: scroll;
     overflow-x: hidden;
-    background-image: url("../img/mine.jpg");
+    width: 100%;
 }
+#chat-section {
+    background-image: url("../img/mine.jpg");
 
+
+}
 .img-avatar {
     height: 8vh;
     border-radius: 50%;
@@ -90,4 +110,25 @@
     font-size: 20px;
     margin: 0 12px;
     color: #8edafc;
+}
+
+#message-section {
+    border: 10px solid #f3eeea;
+    border-radius: 15px;
+}
+
+.chat-message {
+    display: flex;
+    width: 50px;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 100px;
+}
+.sent-messages {
+    justify-content: start;
+    background-color: #d5f9ba;
+}
+.received-messages {
+    justify-content: start;
+    background-color: white;
 }
