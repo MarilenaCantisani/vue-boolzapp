@@ -1,7 +1,7 @@
 /*// UTILITY */
 /* Sizing */
 .h-100vh {
-    height: 100%;
+    height: 100vh;
 }
 .h-90vh {
     height: 90vh;
@@ -22,11 +22,27 @@
 .w-1200 {
     width: 1200px;
 }
+/* Bg-color */
+.bg-light-grey {
+    background-color: #eaeaea;
+}
+.bg-light-blue {
+    background-color: #8edafc;    
+}
+.bg-ligher-grey {
+    background-color: #fafafa;
+}
+.bg-chat-selected {
+    background-color: #e9ebeb;
+}
+.bg-light-beige {
+    background-color: #f3eeea;    
+}
 
 
 /*// BODY LAYOUT */
 #full-bg {
-    background-image: linear-gradient(to top, #FFFFFF 80%, #128C7E 20%);
+    background-image: linear-gradient(to top, #dddcd3 80%, #128C7E 10%);
 }
 
 #main-screen {
@@ -43,4 +59,5 @@
 #cental-chat-contact {
     overflow-y: scroll;
     overflow-x: hidden;
+    background-image: url("../img/mine.jpg");
 }
