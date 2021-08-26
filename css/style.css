@@ -1,0 +1,46 @@
+/*// UTILITY */
+/* Sizing */
+.h-100vh {
+    height: 100%;
+}
+.h-90vh {
+    height: 90vh;
+}
+.h-4vh {
+    height: 5vh;
+}
+.h-10vh {
+    height: 10vh;
+}
+.h-11vh {
+    height: 11vh;
+}
+.h-70vh {
+    height: 70vh;
+
+}
+.w-1200 {
+    width: 1200px;
+}
+
+
+/*// BODY LAYOUT */
+#full-bg {
+    background-image: linear-gradient(to top, #FFFFFF 80%, #128C7E 20%);
+}
+
+#main-screen {
+    position: relative;
+    top: 5vh;
+}
+#contact {
+    overflow-y: scroll;
+    height: 60vh;
+    overflow-x: hidden;
+}
+
+/*// CHAT LAYOUT */
+#cental-chat-contact {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
