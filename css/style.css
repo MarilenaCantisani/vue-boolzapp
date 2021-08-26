@@ -38,6 +38,10 @@
 .bg-light-beige {
     background-color: #f3eeea;    
 }
+/* Text-color */
+.text-grey {
+    color: #b1b1b1;
+}
 
 
 /*// BODY LAYOUT */
@@ -60,4 +64,9 @@
     overflow-y: scroll;
     overflow-x: hidden;
     background-image: url("../img/mine.jpg");
+}
+
+.img-avatar {
+    height: 8vh;
+    border-radius: 50%;
 }
