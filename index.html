@@ -13,14 +13,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link file data js -->
+    <script src="./js/data.js"></script>
+    <!-- Link Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- Link favicon -->
-    <link rel="icon" href="./img/favicon.jpg">
+    <link rel="icon" href="./img/favicon_1.png">
     <title>Boolzapp</title>
 </head>
 
 <body>
     <!-- MAIN SCREEN -->
-    <div id="full-bg" class="h-100vh">
+    <div id="root" class="full-bg h-100vh">
         <section id="main-screen" class="h-90vh w-1200 m-auto shadow">
             <div class="row">
                 <!--// CONTACT COLUMN -->
@@ -53,7 +57,8 @@
                     <!--** Chat search section -->
                     <section id="chat-search" class="row bg-ligher-grey">
                         <div class="col h-4vh bg-white m-2 d-flex align-items-center">
-                            <i class="fas fa-search text-light-grey ms-2 me-4 search-chat"></i>
+                            <label for="search"><i
+                                    class="fas fa-search text-light-grey ms-2 me-4 search-chat clickable"></i></label>
                             <input id="search" class="w-100 f-12 text-dark-grey border-0" type="text"
                                 placeholder="Cerca o inizia una nuova chat">
                         </div>
@@ -239,8 +244,8 @@
 
     </div>
 
-
-
+    <!-- File my js -->
+    <script src="./js/script.js"></script>
 
 </body>
 

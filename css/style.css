@@ -92,7 +92,7 @@ i:hover:not(.search-chat, .fa-bell-slash) {
 
 
 /*// BODY LAYOUT */
-#full-bg {
+.full-bg {
     background-image: linear-gradient(to top, #dddcd3 80%, #128C7E 10%);
 }
 
