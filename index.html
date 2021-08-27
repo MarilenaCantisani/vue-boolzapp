@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Link file data js -->
-    <script src="./js/data.js"></script>
+
     <!-- Link Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
     <!-- Link favicon -->
     <link rel="icon" href="./img/favicon_1.png">
     <title>Boolzapp</title>
@@ -31,9 +31,10 @@
                 <div id="contact-section" class="col-4 h-90vh bg-white">
                     <!--** User name section -->
                     <section id="user-name" class="row h-10vh bg-light-grey">
-                        <div class="col d-flex align-items-center">
-                            <img class="img-avatar clickable" src="./img/avatar_io.jpg" alt="">
-                            <span class="f-15 clickable mx-2">{{ user.name }}</span>
+                        <div class="col d-flex align-items-center mx-2">
+                            <img class="img-avatar clickable" :src="`img/avatar${data.user.avatar}.jpg`"
+                                :alt="data.user.name">
+                            <span class="f-15 clickable mx-2">{{ data.user.name }}</span>
                         </div>
                         <div class="col text-end d-flex align-items-center justify-content-end">
                             <i class="fas fa-circle-notch px-2 text-grey f-20 clickable"></i>
@@ -66,45 +67,10 @@
                     <!--** Users chat section -->
                     <section id="contact" class="bg-white">
                         <div class="row">
-                            <div
-                                class="contact-chat col-12 h-10vh bg-chat-selected border-bottom border-light d-flex align-items-center mx-2 clickable">
-                                <img class="img-avatar" src="./img/avatar_1.jpg" alt="">
-                                <span class="mx-2">Michele</span>
-                            </div>
-                            <div
-                                class="contact-chat col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2 clickable">
-                                <img class="img-avatar" src="./img/avatar_2.jpg" alt="">
-                                <span class="mx-2">Fabio</span>
-                            </div>
-                            <div
-                                class="contact-chat col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2 clickable">
-                                <img class="img-avatar" src="./img/avatar_3.jpg" alt="">
-                                <span class="mx-2">Samuele</span>
-                            </div>
-                            <div
-                                class="contact-chat col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2 clickable">
-                                <img class="img-avatar" src="./img/avatar_4.jpg" alt="">
-                                <span class="mx-2">Luisa</span>
-                            </div>
-                            <div
-                                class="contact-chat col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2 clickable">
-                                <img class="img-avatar" src="./img/avatar_1.jpg" alt="">
-                                <span class="mx-2">Michele</span>
-                            </div>
-                            <div
-                                class="contact-chat col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2 clickable">
-                                <img class="img-avatar" src="./img/avatar_2.jpg" alt="">
-                                <span class="mx-2">Fabio</span>
-                            </div>
-                            <div
-                                class="contact-chat col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2 clickable">
-                                <img class="img-avatar" src="./img/avatar_3.jpg" alt="">
-                                <span class="mx-2">Samuele</span>
-                            </div>
-                            <div
-                                class="contact-chat col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2 clickable">
-                                <img class="img-avatar" src="./img/avatar_4.jpg" alt="">
-                                <span class="mx-2">Luisa</span>
+                            <div class="contact-chat col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2 clickable"
+                                v-for="contact in data.contacts">
+                                <img class="img-avatar" :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
+                                <span class="mx-2">{{contact.name}}</span>
                             </div>
                         </div>
                     </section>
@@ -247,7 +213,10 @@
 
 
     <!-- My js -->
+    <!-- Link file data js -->
+    <script src="./js/data.js"></script>
     <script src="./js/script.js"></script>
+
 
 
 
