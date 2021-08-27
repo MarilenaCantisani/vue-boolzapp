@@ -32,9 +32,8 @@
                     <!--** User name section -->
                     <section id="user-name" class="row h-10vh bg-light-grey">
                         <div class="col d-flex align-items-center mx-2">
-                            <img class="img-avatar clickable" :src="`img/avatar${data.user.avatar}.jpg`"
-                                :alt="data.user.name">
-                            <span class="f-15 clickable mx-2">{{ data.user.name }}</span>
+                            <img class="img-avatar clickable" :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">
+                            <span class="f-15 clickable mx-2">{{ user.name }}</span>
                         </div>
                         <div class="col text-end d-flex align-items-center justify-content-end">
                             <i class="fas fa-circle-notch px-2 text-grey f-20 clickable"></i>
@@ -68,7 +67,7 @@
                     <section id="contact" class="bg-white">
                         <div class="row">
                             <div class="contact-chat col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2 clickable"
-                                v-for="contact in data.contacts">
+                                v-for="(contact,index) in contacts" @click="changeCurrentUser(index)">
                                 <img class="img-avatar" :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                 <span class="mx-2">{{contact.name}}</span>
                             </div>
@@ -80,9 +79,11 @@
                 <div id="chat-section" class="col-8 h-90vh">
                     <header id="top-bar-contact" class="row d-flex">
                         <div class="col h-10vh bg-light-grey d-flex align-items-center">
-                            <img class="img-avatar mx-2 clickable" src="./img/avatar_1.jpg" alt="">
+                            <img class="img-avatar mx-2 clickable"
+                                :src="`img/avatar${contacts[currentUser].avatar}.jpg`"
+                                :alt="contacts[currentUser].name">
                             <span class="mx-2">
-                                <div class="f-15 lh-sm clickable">Michele</div>
+                                <div class="f-15 lh-sm clickable">{{contacts[currentUser].name}}</div>
                                 <div class="text-dark-grey f-12 lh-sm fw-light">Ultimo accesso oggi alle pre 10:30</div>
                             </span>
                         </div>
@@ -93,102 +94,13 @@
                         </div>
                     </header>
                     <main id="cental-chat-contact" class="h-70vh">
-                        <div class="message-container sent-messages">
+                        <div class="message-container " :class="element.status"
+                            v-for="(element,index) in contacts[currentUser].messages">
                             <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
+                                <p class="lh-sm mb-0">
+                                    {{element.message}}</p>
                                 <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container received-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container sent-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container received-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container sent-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container received-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container sent-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container received-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container sent-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container received-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container sent-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container received-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container sent-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
-                            </div>
-                        </div>
-                        <div class="message-container received-messages">
-                            <div class="message p-2 ">
-                                <p class="lh-sm mb-0">Hai portato a spasso il cane?</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">24/10/2020 15:20</time>
+                                    datetime="2020-10-24 15:20">{{element.date}}</time>
                             </div>
                         </div>
                     </main>
@@ -212,9 +124,7 @@
     </div>
 
 
-    <!-- My js -->
-    <!-- Link file data js -->
-    <script src="./js/data.js"></script>
+    <!-- My file js -->
     <script src="./js/script.js"></script>
 
 

@@ -137,17 +137,17 @@ i:hover:not(.search-chat, .fa-bell-slash) {
 .message-container {
     display: flex;
 }
-.message-container.sent-messages {
+.message-container.sent {
     justify-content: flex-end;
 }
-.message-container.received-messages {
+.message-container.received {
     justify-content: flex-start;
 }
-.message-container.sent-messages .message {
+.message-container.sent .message {
     background-color: #d5f9ba;
     margin-right: 100px;
 }
-.message-container.received-messages .message {
+.message-container.received .message {
     background-color: white;
     margin-left: 100px;
 }
