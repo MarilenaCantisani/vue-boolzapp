@@ -99,10 +99,9 @@ const app = new Vue({
     },
     methods: {
         changeCurrentUser(index) {
-            if (index < contacts.length) {
-                this.currentUser = index;
-            };
-        }
+            this.currentUser = index;
+        },
+
     }
 });
 
