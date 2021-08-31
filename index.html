@@ -75,7 +75,6 @@
                         </div>
                     </section>
                 </div>
-
                 <!--// CHAT COLUMN -->
                 <div id="chat-section" class="col-8 h-90vh">
                     <!--* Header chat section -->
@@ -102,8 +101,8 @@
                             v-for="(element,index) in contacts[currentUser].messages">
                             <div class="message py-3 shadow row">
                                 <p class="col lh-sm mb-0">{{element.message}}</p>
-                                <i
-                                    class=" lh-1 fas fa-times clickable d-block text-end f-10  col-1 d-flex align-items-start justify-content-end h-100">
+                                <i class=" lh-1 fas fa-times clickable d-block text-end f-10 col-1 d-flex align-items-start justify-content-end h-100"
+                                    @click="deleteMessage(index)">
                                 </i>
                                 <time class="col-12 lh-1 d-block fw-light f-10 text-end text-dark-grey"
                                     datetime="2020-10-24 15:20">
@@ -129,18 +128,9 @@
                 </div>
             </div>
         </section>
-
-
     </div>
-
-
     <!-- My file js -->
     <script src="./js/script.js"></script>
-
-
-
-
-
 </body>
 
 </html>

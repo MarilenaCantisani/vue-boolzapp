@@ -142,9 +142,10 @@ const app = new Vue({
             contact = contact.toLowerCase();
             return contact.includes(this.searchTerm.toLowerCase());
         },
-
-
-
+        //* Function that deletes a message 
+        deleteMessage(index) {
+            this.contacts[this.currentUser].messages.splice(index, 1);
+        },
     }
 });
 
