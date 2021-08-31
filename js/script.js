@@ -8,6 +8,7 @@ const app = new Vue({
     data: {
         currentUser: 0,
         newMessage: "",
+        searchTerm: "",
         user: {
             name: 'Nome Utente',
             avatar: '_io',
@@ -131,6 +132,14 @@ const app = new Vue({
                 this.addNewMessages("ok", "received");
             }, 1000);
         },
+        //* Function for filtering contacts 
+        showContact(contact) {
+            //Check if the search bar is empty and display all contacts
+            if (!this.searchTerm) return true;
+            //Check if the search term is present among the contacts 
+            contact = contact.toLowerCase();
+            return contact.includes(this.searchTerm.toLowerCase());
+        }
     },
 });
 

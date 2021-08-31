@@ -60,14 +60,15 @@
                             <label for="search"><i
                                     class="fas fa-search text-light-grey ms-2 me-4 search-chat clickable"></i></label>
                             <input id="search" class="w-100 f-12 text-dark-grey border-0" type="text"
-                                placeholder="Cerca o inizia una nuova chat">
+                                placeholder="Cerca o inizia una nuova chat" v-model.trim="searchTerm">
                         </div>
                     </section>
                     <!--** Users chat section -->
                     <section id="contact" class="bg-white">
                         <div class="row">
                             <div class="contact-chat col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2 clickable"
-                                v-for="(contact,index) in contacts" @click="changeCurrentUser(index)">
+                                v-for="(contact,index) in contacts" @click="changeCurrentUser(index)"
+                                v-if="showContact(contact.name)">
                                 <img class="img-avatar" :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                 <span class="mx-2">{{contact.name}}</span>
                             </div>
@@ -95,9 +96,9 @@
                         </div>
                     </header>
                     <main id="cental-chat-contact" class="h-70vh">
-                        <div class="message-container " :class="element.status"
+                        <div class="message-container" :class="element.status"
                             v-for="(element,index) in contacts[currentUser].messages">
-                            <div class="message p-2 ">
+                            <div class="message p-2 shadow">
                                 <p class="lh-sm mb-0">
                                     {{element.message}}</p>
                                 <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
