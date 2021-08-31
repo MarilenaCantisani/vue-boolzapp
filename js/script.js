@@ -108,21 +108,29 @@ const app = new Vue({
             const messages = this.contacts[this.currentUser].messages;
             return lastMessage = messages[messages.length - 1].date;
         },
+        //* Function that creates the template of new messages
+        addNewMessages(message, status) {
+            //Build new messsages template 
+            const textNewMessage = {
+                date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                message,
+                status
+            };
+            //Add the new message to the message array
+            this.contacts[this.currentUser].messages.push(textNewMessage);
+        },
         //* Function that prints new messages 
         printNewMessages() {
             //Check that the new message is inserted correctly
             if (!this.newMessage) return;
-            //Build ew messsages template 
-            const textNewMessage = {
-                date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
-                message: this.newMessage,
-                status: 'sent',
-            };
-            //Add the new message to the message array
-            this.contacts[this.currentUser].messages.push(textNewMessage);
+            //Print the new message
+            this.addNewMessages(this.newMessage, "sent");
             this.newMessage = "";
-        }
-
+            //Add an automatic reply to new messages
+            setTimeout(() => {
+                this.addNewMessages("ok", "received");
+            }, 1000);
+        },
     },
 });
 
