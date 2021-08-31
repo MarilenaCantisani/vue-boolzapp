@@ -29,7 +29,7 @@
             <div class="row">
                 <!--// CONTACT COLUMN -->
                 <div id="contact-section" class="col-4 h-90vh bg-white">
-                    <!--** User name section -->
+                    <!--* User name section -->
                     <section id="user-name" class="row h-10vh bg-light-grey">
                         <div class="col d-flex align-items-center mx-2">
                             <img class="img-avatar clickable" :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">
@@ -41,7 +41,7 @@
                             <i class="fas fa-ellipsis-v px-2 text-grey f-20 clickable"></i>
                         </div>
                     </section>
-                    <!--** Alert section -->
+                    <!--* Alert section -->
                     <section id="alert-message" class="row">
                         <div class="col h-11vh bg-light-blue d-flex align-items-center">
                             <i class="fas fa-bell-slash"></i>
@@ -54,7 +54,7 @@
                             </span>
                         </div>
                     </section>
-                    <!--** Chat search section -->
+                    <!--* Chat search section -->
                     <section id="chat-search" class="row bg-ligher-grey">
                         <div class="col h-4vh bg-white m-2 d-flex align-items-center">
                             <label for="search"><i
@@ -63,7 +63,7 @@
                                 placeholder="Cerca o inizia una nuova chat" v-model.trim="searchTerm">
                         </div>
                     </section>
-                    <!--** Users chat section -->
+                    <!--* Users chat section -->
                     <section id="contact" class="bg-white">
                         <div class="row">
                             <div class="contact-chat col-12 h-10vh border-bottom border-light d-flex align-items-center mx-2 clickable"
@@ -78,6 +78,7 @@
 
                 <!--// CHAT COLUMN -->
                 <div id="chat-section" class="col-8 h-90vh">
+                    <!--* Header chat section -->
                     <header id="top-bar-contact" class="row d-flex">
                         <div class="col h-10vh bg-light-grey d-flex align-items-center">
                             <img class="img-avatar mx-2 clickable"
@@ -95,17 +96,23 @@
                             <i class="fas fa-ellipsis-v px-2 text-grey f-20 px-2 text-light-grey clickable"></i>
                         </div>
                     </header>
+                    <!--* Main chat section -->
                     <main id="cental-chat-contact" class="h-70vh">
                         <div class="message-container" :class="element.status"
                             v-for="(element,index) in contacts[currentUser].messages">
-                            <div class="message p-2 shadow">
-                                <p class="lh-sm mb-0">
-                                    {{element.message}}</p>
-                                <time class="lh-sm d-block fw-light f-10 text-end text-dark-grey"
-                                    datetime="2020-10-24 15:20">{{element.date}}</time>
+                            <div class="message py-3 shadow row">
+                                <p class="col lh-sm mb-0">{{element.message}}</p>
+                                <i
+                                    class=" lh-1 fas fa-times clickable d-block text-end f-10  col-1 d-flex align-items-start justify-content-end h-100">
+                                </i>
+                                <time class="col-12 lh-1 d-block fw-light f-10 text-end text-dark-grey"
+                                    datetime="2020-10-24 15:20">
+                                    {{element.date}}
+                                </time>
                             </div>
                         </div>
                     </main>
+                    <!--* Footer chat section -->
                     <footer id="bottom-bar-message" class="row d-flex  bg-light-beige">
                         <div class="col-1 h-10vh bg-light-beige d-flex align-items-center justify-content-center">
                             <i class="far fa-smile f-24 text-dark-grey clickable"></i>

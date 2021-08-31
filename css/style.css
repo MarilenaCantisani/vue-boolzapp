@@ -2,6 +2,9 @@
 .clickable {
     cursor: pointer;
 }
+.hidden {
+    visibility: hidden;
+}
 /* Hover effects */
 i:hover:not(.search-chat, .fa-bell-slash) {
     color: #25D366;
@@ -136,6 +139,7 @@ i:hover:not(.search-chat, .fa-bell-slash) {
 }
 .message-container {
     display: flex;
+    position: relative;
 }
 .message-container.sent {
     justify-content: flex-end;
@@ -153,6 +157,27 @@ i:hover:not(.search-chat, .fa-bell-slash) {
 }
 .message {
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 10px 0;
 }
+
+#drop-down-menu {
+    list-style-type: none;
+    font-size: 14px;
+    position: absolute;  
+    display: block;
+    
+}
+
+
+
+#drop-down-menu.sent {
+    top: 35px;
+    left: 642px;
+}
+
+#drop-down-menu.received {
+    top: 35px;
+    left: 307px;
+}
+

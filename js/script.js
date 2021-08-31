@@ -9,6 +9,8 @@ const app = new Vue({
         currentUser: 0,
         newMessage: "",
         searchTerm: "",
+        isInputVisible: false,
+
         user: {
             name: 'Nome Utente',
             avatar: '_io',
@@ -139,8 +141,11 @@ const app = new Vue({
             //Check if the search term is present among the contacts 
             contact = contact.toLowerCase();
             return contact.includes(this.searchTerm.toLowerCase());
-        }
-    },
+        },
+
+
+
+    }
 });
 
 
