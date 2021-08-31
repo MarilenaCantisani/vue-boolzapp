@@ -6,11 +6,12 @@ Vue.config.devtools = true;
 const app = new Vue({
     el: "#root",
     data: {
+        currentUser: 0,
+        newMessage: "",
         user: {
             name: 'Nome Utente',
             avatar: '_io',
         },
-        currentUser: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -98,11 +99,31 @@ const app = new Vue({
         ]
     },
     methods: {
+        //* Function that changes the number of the current user 
         changeCurrentUser(index) {
             this.currentUser = index;
         },
+        //* Function to report the date of last message
+        printLastAccess() {
+            const messages = this.contacts[this.currentUser].messages;
+            return lastMessage = messages[messages.length - 1].date;
+        },
+        //* Function that prints new messages 
+        printNewMessages() {
+            //Check that the new message is inserted correctly
+            if (!this.newMessage) return;
+            //Build ew messsages template 
+            const textNewMessage = {
+                date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                message: this.newMessage,
+                status: 'sent',
+            };
+            //Add the new message to the message array
+            this.contacts[this.currentUser].messages.push(textNewMessage);
+            this.newMessage = "";
+        }
 
-    }
+    },
 });
 
 

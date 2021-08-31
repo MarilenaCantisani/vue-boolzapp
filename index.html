@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- Link Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
+    <!-- Link dayjs -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.6/dayjs.min.js"></script>
     <!-- Link favicon -->
     <link rel="icon" href="./img/favicon_1.png">
     <title>Boolzapp</title>
@@ -84,7 +84,8 @@
                                 :alt="contacts[currentUser].name">
                             <span class="mx-2">
                                 <div class="f-15 lh-sm clickable">{{contacts[currentUser].name}}</div>
-                                <div class="text-dark-grey f-12 lh-sm fw-light">Ultimo accesso oggi alle ore 10:30</div>
+                                <div class="text-dark-grey f-12 lh-sm fw-light">Ultimo accesso {{printLastAccess()}}
+                                </div>
                             </span>
                         </div>
                         <div class="col h-10vh bg-light-grey d-flex align-items-center justify-content-end">
@@ -110,7 +111,8 @@
                         </div>
                         <div id="message-section" class="col-10 d-flex bg-white align-items-center">
                             <input class="text-dark-grey f-15 w-100 border-0" type="text"
-                                placeholder="Scrivi un messaggio">
+                                placeholder="Scrivi un messaggio" v-model.trim="newMessage"
+                                @keyup.enter="printNewMessages">
                         </div>
                         <div class="col-1 h-10vh bg-light-beige d-flex align-items-center justify-content-center">
                             <i class="fas fa-microphone f-24 text-dark-grey clickable"></i>
